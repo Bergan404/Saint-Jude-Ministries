@@ -2,12 +2,23 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/HeroSection.astro';
-
-import HomeHero from "../assets/home_hero.jpeg";
+import GalleryImage from '../components/GalleryImage.astro';
 
 import { Image } from 'astro:assets';
 
+import HomeHero from "../assets/home_hero.jpeg";
 import Gallery1 from '../assets/wedding_ceremonies.jpeg';
+import Gallery2 from '../assets/baptismal_ceremonies.jpeg';
+import Gallery3 from '../assets/funeral.jpeg';
+import Gallery4 from '../assets/hospital_visits.jpeg';
+import Gallery5 from '../assets/premarital_counseling.jpeg';
+import Gallery6 from '../assets/family_counseling.jpeg';
+
+import WeddingService1 from "../assets/wedding_service.jpeg";
+import WeddingService2 from "../assets/wedding_service_2.jpeg";
+import WeddingService3 from "../assets/wedding_service_3.jpeg";
+import WeddingService4 from "../assets/wedding_service_4.jpeg";
+
 ---
 
 <Layout>
@@ -26,24 +37,45 @@ import Gallery1 from '../assets/wedding_ceremonies.jpeg';
 	<!-- Gallery Images -->
 	<section class="container-fluid lightgray-bg py-4">
 		<div class="container d-flex flex-wrap gap-4">
-			<div class="col col-3-5 gallery">
-				<Image src={Gallery1} alt="Wedding Ceremonies" class=""/>
-			</div>
-			<div class="col col-3-5 gallery">
-				<Image src={Gallery1} alt="Wedding Ceremonies" class=""/>
-			</div>
-			<div class="col col-3-5 gallery">
-				<Image src={Gallery1} alt="Wedding Ceremonies" class=""/>
-			</div>
-			<div class="col col-3-5 gallery">
-				<Image src={Gallery1} alt="Wedding Ceremonies" class=""/>
-			</div>
-			<div class="col col-3-5 gallery">
-				<Image src={Gallery1} alt="Wedding Ceremonies" class=""/>
-			</div>
-			<div class="col col-3-5 gallery">
-				<Image src={Gallery1} alt="Wedding Ceremonies" class=""/>
-			</div>
+			<GalleryImage 
+			imagePath={Gallery1}
+			title="Wedding Ceremonies"
+			/>
+			<GalleryImage 
+			imagePath={Gallery2}
+			title="Baptismal Ceremonies"
+			/>
+			<GalleryImage 
+			imagePath={Gallery3}
+			title="Funeral or Celebration of Life"
+			/>
+			<GalleryImage 
+			imagePath={Gallery4}
+			title="Hospital Visits"
+			/>
+			<GalleryImage 
+			imagePath={Gallery5}
+			title="Premarital Counseling"
+			/>
+			<GalleryImage 
+			imagePath={Gallery6}
+			title="Family Counseling"
+			/>
 		</div>
-	</section>	 
+	</section>
+
+	<!-- Our Wedding Services -->
+	<section class="container py-4">
+		<h1 class="text-center title-text">Our Wedding Services</h1>
+		<p>We want to make your special day a memorable and personal experience. Due to our commitment to you and to making this the most special day of your lives, we are happy to customize and personalize your ceremony. We have found that coordination with the other vendors providing specialized services at your respective ceremony is the key to success!</p>
+
+		<div class="py-5">
+			<Image src={WeddingService1} alt="Wedding Sevice" />
+		</div>
+
+		<h2 class="text-center subtitle-text">Premarital Counseling</h2>
+		<p>With the many challenges that face couples today, we encourage premarital counseling to assist and provide couples with the tools necessary to continue in a loving and fulfilling marital relationship. This is especially true if the couple come from different religious, cultural, or social backgrounds.</p>
+		<p>In support of making your marriage a long and successful one, we offer this service to our couples. We are also happy to provide a referral to another qualified professionals in our network. </p>
+		<em>*For those couples seeking a Certificate of Premarital Course completion to waive the three-day waiting period and receive a discounted fee for the Florida Marriage License, a minimum of four (4) hours must be completed by personal instruction, video, or other electronic means.</em>
+	 </section>
 </Layout>

@@ -25,6 +25,15 @@ p {
     line-height: 1.77;
 }
 
+em {
+  color: #666666;
+  font-family: Lora, Arial;
+  font-size: 12pt;
+  font-weight: 400;
+  vertical-align: baseline;
+  line-height: 1.77;
+}
+
 .overlay {
   position: absolute;
   width: 100%;
@@ -50,11 +59,24 @@ p {
     width: 100%;
     height: auto;
   }
+  .gallery-headers {
+    color: rgba(34, 110, 147, 1);
+    font-size: 16pt;
+    font-weight: bold;
+  }
 }
 
 .title-text {
   color: rgba(34, 110, 147, 1);
   font-size: 34pt;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.2;
+}
+
+.subtitle-text {
+  color: rgba(34, 110, 147, 1);
+  font-size: 26pt;
   font-weight: 400;
   letter-spacing: normal;
   line-height: 1.2;
