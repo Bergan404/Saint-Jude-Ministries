@@ -1,11 +1,28 @@
-
 h1 {
-    font-size: 68pt;
-    font-family: Lora, serif;
-    letter-spacing: -1px;
-    line-height: 1;
+  font-size: 68pt;
+  font-family: Lora, serif;
+  letter-spacing: -1px;
+  line-height: 1;
+  font-weight: 400;
+  width: 100%;
+}
+
+h2 {
+  font-size: 27pt;
+  font-family: Lora, serif;
+  letter-spacing: -1px;
+  line-height: 1;
+  font-weight: 400;
+  width: 100%;
+}
+
+p {
+    color: #666666;
+    font-family: Lora, Arial;
+    font-size: 14pt;
     font-weight: 400;
-    width: 100%;
+    vertical-align: baseline;
+    line-height: 1.77;
 }
 
 .overlay {
@@ -26,4 +43,29 @@ h1 {
   left: 0px;
   z-index: 0;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.title-text {
+  color: rgba(34, 110, 147, 1);
+  font-size: 34pt;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.2;
+}
+
+.lightgray-bg {
+  background-color: rgba(242, 242, 242, 1);
+  display: block;
+}
+
+.col-3-5 {
+  flex: 0 0 auto;
+  width: 31%;
 }

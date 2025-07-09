@@ -4,6 +4,10 @@ import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/HeroSection.astro';
 
 import HomeHero from "../assets/home_hero.jpeg";
+
+import { Image } from 'astro:assets';
+
+import Gallery1 from '../assets/wedding_ceremonies.jpeg';
 ---
 
 <Layout>
@@ -12,5 +16,34 @@ import HomeHero from "../assets/home_hero.jpeg";
 		title="Saint Jude"
 		body="Serving those of All faiths and backgrounds."
 	/>
-	
+
+	<!-- text start -->
+	 <section class="container py-4">
+		<h1 class="text-center title-text">A Personalized Experience!</h1>
+		<p>Saint Jude Ministries and Saint Jude Catholic Mission assists those persons who are unaffiliated, away from home, or looking for a new home. We are an inclusive and ecumenical ministry providing very personalized services. We are members of the Catholic Apostolic Church International, Good Shepherd Companions, and the Independent Liberal Catholic Fellowship. Spiritual guidance and counsel is the foundation of our work with an emphasis on providing an array of chaplaincy services such as:</p>
+	 </section>
+
+	<!-- Gallery Images -->
+	<section class="container-fluid lightgray-bg py-4">
+		<div class="container d-flex flex-wrap gap-4">
+			<div class="col col-3-5 gallery">
+				<Image src={Gallery1} alt="Wedding Ceremonies" class=""/>
+			</div>
+			<div class="col col-3-5 gallery">
+				<Image src={Gallery1} alt="Wedding Ceremonies" class=""/>
+			</div>
+			<div class="col col-3-5 gallery">
+				<Image src={Gallery1} alt="Wedding Ceremonies" class=""/>
+			</div>
+			<div class="col col-3-5 gallery">
+				<Image src={Gallery1} alt="Wedding Ceremonies" class=""/>
+			</div>
+			<div class="col col-3-5 gallery">
+				<Image src={Gallery1} alt="Wedding Ceremonies" class=""/>
+			</div>
+			<div class="col col-3-5 gallery">
+				<Image src={Gallery1} alt="Wedding Ceremonies" class=""/>
+			</div>
+		</div>
+	</section>	 
 </Layout>
