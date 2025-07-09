@@ -1,13 +1,69 @@
+---
+import 'bootstrap/dist/css/bootstrap.css'
+import { Breadcrumb } from 'astro-bootstrap';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Saint Jude Ministries</title>
+		<meta property="og:title" content="Home" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:url"
+			content="https://www.saintjudeministries.org/"
+		/>
+		<meta
+			property="og:description"
+			content="A Personalized Experience!
+Saint Jude Ministries and Saint Jude Catholic Mission assists those persons who are unaffiliated, away from home, or looking for a new home. We are an inclusive and ecumenical ministry providing very personalized services. We are members of the Catholic Apostolic Church"
+		/>
+		<meta itemprop="name" content="Home" />
+		<meta
+			itemprop="description"
+			content="A Personalized Experience!
+Saint Jude Ministries and Saint Jude Catholic Mission assists those persons who are unaffiliated, away from home, or looking for a new home. We are an inclusive and ecumenical ministry providing very personalized services. We are members of the Catholic Apostolic Church"
+		/>
+		<meta itemprop="url" content="https://www.saintjudeministries.org/" />
+		<meta
+			itemprop="thumbnailUrl"
+			content="https://lh5.googleusercontent.com/knucxMkfNmpQxkciqo1OOUzJTBSDVTlsMB-pjtjezX7-pTrhVSDURs1-EsMFizk2wNkfK82R1SxLj7S_1n6kclznyz256I2tOMMeWe1xYjoPYgiiocHBU4cc-g8YzcgkYCYSxk5hDwk=w16383"
+		/>
+		<meta
+			itemprop="image"
+			content="https://lh5.googleusercontent.com/knucxMkfNmpQxkciqo1OOUzJTBSDVTlsMB-pjtjezX7-pTrhVSDURs1-EsMFizk2wNkfK82R1SxLj7S_1n6kclznyz256I2tOMMeWe1xYjoPYgiiocHBU4cc-g8YzcgkYCYSxk5hDwk=w16383"
+		/>
+		<meta
+			itemprop="imageUrl"
+			content="https://lh5.googleusercontent.com/knucxMkfNmpQxkciqo1OOUzJTBSDVTlsMB-pjtjezX7-pTrhVSDURs1-EsMFizk2wNkfK82R1SxLj7S_1n6kclznyz256I2tOMMeWe1xYjoPYgiiocHBU4cc-g8YzcgkYCYSxk5hDwk=w16383"
+		/>
+		<meta
+			property="og:image"
+			content="https://lh5.googleusercontent.com/knucxMkfNmpQxkciqo1OOUzJTBSDVTlsMB-pjtjezX7-pTrhVSDURs1-EsMFizk2wNkfK82R1SxLj7S_1n6kclznyz256I2tOMMeWe1xYjoPYgiiocHBU4cc-g8YzcgkYCYSxk5hDwk=w16383"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Lora%3A400%2C400italic%2C700%2C700italic%7CGentium%20Basic%3A400%2C400italic%2C700%2C700italic&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:300,400,500,700|Source+Code+Pro:400,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Lora%3Ai%2Cbi%2C700%2C400%2C600&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto%3Ai%2Cbi%2C700%2C400&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
+		<Breadcrumb />
 		<slot />
 	</body>
 </html>
