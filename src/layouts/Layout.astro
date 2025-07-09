@@ -1,6 +1,10 @@
 ---
 import 'bootstrap/dist/css/bootstrap.css'
 import { Breadcrumb } from 'astro-bootstrap';
+
+import Navbar from '../components/Navbar.astro';
+
+import "../assets/styles/styles.scss";
 ---
 
 <!doctype html>
@@ -62,8 +66,9 @@ Saint Jude Ministries and Saint Jude Catholic Mission assists those persons who 
 			rel="stylesheet"
 		/>
 	</head>
+	<Navbar />
 	<body>
-		<Breadcrumb />
+		<!-- <Breadcrumb /> -->
 		<slot />
 	</body>
 </html>
