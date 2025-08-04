@@ -1,24 +1,24 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import HeroSection from '../components/HeroSection.astro';
-import GalleryImage from '../components/GalleryImage.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import GalleryImage from "../components/GalleryImage.astro";
+import BookNextEvent from "../components/BookNextEvent.astro";
 
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 import HomeHero from "../assets/home_hero.jpeg";
-import Gallery1 from '../assets/wedding_ceremonies.jpeg';
-import Gallery2 from '../assets/baptismal_ceremonies.jpeg';
-import Gallery3 from '../assets/funeral.jpeg';
-import Gallery4 from '../assets/hospital_visits.jpeg';
-import Gallery5 from '../assets/premarital_counseling.jpeg';
-import Gallery6 from '../assets/family_counseling.jpeg';
+import Gallery1 from "../assets/wedding_ceremonies.jpeg";
+import Gallery2 from "../assets/baptismal_ceremonies.jpeg";
+import Gallery3 from "../assets/funeral.jpeg";
+import Gallery4 from "../assets/hospital_visits.jpeg";
+import Gallery5 from "../assets/premarital_counseling.jpeg";
+import Gallery6 from "../assets/family_counseling.jpeg";
 
 import WeddingService1 from "../assets/wedding_service.jpeg";
 import WeddingService2 from "../assets/wedding_service_2.jpeg";
 import WeddingService3 from "../assets/wedding_service_3.jpeg";
 import WeddingService4 from "../assets/wedding_service_4.jpeg";
-
 ---
 
 <Layout>
@@ -29,53 +29,107 @@ import WeddingService4 from "../assets/wedding_service_4.jpeg";
 	/>
 
 	<!-- text start -->
-	 <section class="container py-4">
+	<section class="container py-4">
 		<h1 class="text-center title-text">A Personalized Experience!</h1>
-		<p>Saint Jude Ministries and Saint Jude Catholic Mission assists those persons who are unaffiliated, away from home, or looking for a new home. We are an inclusive and ecumenical ministry providing very personalized services. We are members of the Catholic Apostolic Church International, Good Shepherd Companions, and the Independent Liberal Catholic Fellowship. Spiritual guidance and counsel is the foundation of our work with an emphasis on providing an array of chaplaincy services such as:</p>
-	 </section>
+		<p>
+			Saint Jude Ministries and Saint Jude Catholic Mission assists those
+			persons who are unaffiliated, away from home, or looking for a new
+			home. We are an inclusive and ecumenical ministry providing very
+			personalized services. We are members of the Catholic Apostolic
+			Church International, Good Shepherd Companions, and the Independent
+			Liberal Catholic Fellowship. Spiritual guidance and counsel is the
+			foundation of our work with an emphasis on providing an array of
+			chaplaincy services such as:
+		</p>
+	</section>
 
 	<!-- Gallery Images -->
 	<section class="container-fluid lightgray-bg py-4">
 		<div class="container d-flex flex-wrap gap-4">
-			<GalleryImage 
-			imagePath={Gallery1}
-			title="Wedding Ceremonies"
+			<GalleryImage imagePath={Gallery1} title="Wedding Ceremonies" />
+			<GalleryImage imagePath={Gallery2} title="Baptismal Ceremonies" />
+			<GalleryImage
+				imagePath={Gallery3}
+				title="Funeral or Celebration of Life"
 			/>
-			<GalleryImage 
-			imagePath={Gallery2}
-			title="Baptismal Ceremonies"
-			/>
-			<GalleryImage 
-			imagePath={Gallery3}
-			title="Funeral or Celebration of Life"
-			/>
-			<GalleryImage 
-			imagePath={Gallery4}
-			title="Hospital Visits"
-			/>
-			<GalleryImage 
-			imagePath={Gallery5}
-			title="Premarital Counseling"
-			/>
-			<GalleryImage 
-			imagePath={Gallery6}
-			title="Family Counseling"
-			/>
+			<GalleryImage imagePath={Gallery4} title="Hospital Visits" />
+			<GalleryImage imagePath={Gallery5} title="Premarital Counseling" />
+			<GalleryImage imagePath={Gallery6} title="Family Counseling" />
 		</div>
 	</section>
 
 	<!-- Our Wedding Services -->
 	<section class="container py-4">
 		<h1 class="text-center title-text">Our Wedding Services</h1>
-		<p>We want to make your special day a memorable and personal experience. Due to our commitment to you and to making this the most special day of your lives, we are happy to customize and personalize your ceremony. We have found that coordination with the other vendors providing specialized services at your respective ceremony is the key to success!</p>
+		<p>
+			We want to make your special day a memorable and personal
+			experience. Due to our commitment to you and to making this the most
+			special day of your lives, we are happy to customize and personalize
+			your ceremony. We have found that coordination with the other
+			vendors providing specialized services at your respective ceremony
+			is the key to success!
+		</p>
 
-		<div class="py-5">
+		<div class="py-5 w-100">
 			<Image src={WeddingService1} alt="Wedding Sevice" />
 		</div>
 
 		<h2 class="text-center subtitle-text">Premarital Counseling</h2>
-		<p>With the many challenges that face couples today, we encourage premarital counseling to assist and provide couples with the tools necessary to continue in a loving and fulfilling marital relationship. This is especially true if the couple come from different religious, cultural, or social backgrounds.</p>
-		<p>In support of making your marriage a long and successful one, we offer this service to our couples. We are also happy to provide a referral to another qualified professionals in our network. </p>
-		<em>*For those couples seeking a Certificate of Premarital Course completion to waive the three-day waiting period and receive a discounted fee for the Florida Marriage License, a minimum of four (4) hours must be completed by personal instruction, video, or other electronic means.</em>
-	 </section>
+		<p>
+			With the many challenges that face couples today, we encourage
+			premarital counseling to assist and provide couples with the tools
+			necessary to continue in a loving and fulfilling marital
+			relationship. This is especially true if the couple come from
+			different religious, cultural, or social backgrounds.
+		</p>
+		<p>
+			In support of making your marriage a long and successful one, we
+			offer this service to our couples. We are also happy to provide a
+			referral to another qualified professionals in our network.
+		</p>
+		<em
+			>*For those couples seeking a Certificate of Premarital Course
+			completion to waive the three-day waiting period and receive a
+			discounted fee for the Florida Marriage License, a minimum of four
+			(4) hours must be completed by personal instruction, video, or other
+			electronic means.</em
+		>
+
+		<BookNextEvent />
+	</section>
+
+	<section class="container-fluid lightgray-bg py-4">
+		<div class="container">
+			<div class="py-5 w-100">
+				<Image src={WeddingService2} alt="Wedding Sevice" />
+			</div>
+
+			<BookNextEvent />
+		</div>
+	</section>
+
+	<section class="container py-4">
+		<div class="py-5 w-100">
+			<Image src={WeddingService3} alt="Customized Ceremony" />
+		</div>
+
+		<h2 class="text-center subtitle-text">Customized Ceremony</h2>
+		<div>
+			<p>
+				We specialize in customizing ceremonies to make them a loving and personal experience, one to be remembered by you and your loved ones throughout your lives together. Our ceremonies may also be customized to incorporate any special cultural or religious requirements you may desire. This is your special day, the first day of the rest of your lives together. 
+			</p>
+			<p>
+				In support of making your wedding day and marriage a happy and successful one, we like to meet with our couples, in advance, to discuss the different types of ceremonies which are available to you and how to make your special day one to remember for a lifetime. If an advance meeting is not possible, we can provide this service by email or by phone by using simple questionnaires. 
+			</p>
+			<p>
+				We recommend meeting with you in order for us to get to know one another and to learn more about you as a couple. We can then use this information to make your ceremony the most loving and special one it can be. You have complete control over what is or is not included in your ceremony.
+			</p>
+		</div>
+		
+		<div class="py-5 w-100">
+			<Image src={WeddingService4} alt="Customized Ceremony" />
+		</div>
+
+		<BookNextEvent />
+	</section>
 </Layout>
