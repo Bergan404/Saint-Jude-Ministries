@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+
+import Award1 from "../assets/award_1.jpeg";
+import Award2 from "../assets/award_2.png";
+import Award3 from "../assets/award_3.png";
+import LogoPanel from "../assets/logo_panel.png";
+---
+
+<div class="my-4 col-10 m-auto">
+    <div class="d-flex justify-content-around py-4">
+        <div class="col-3 award_logos">
+            <Image src={Award1} alt="Best of Weddings" />
+        </div>
+        <div class="col-3 award_logos">
+            <Image src={Award2} alt="Couples choise awards" />
+        </div>
+        <div class="col-3 award_logos">
+            <Image src={Award3} alt="Best of weddings" />
+        </div>
+    </div>
+    <div class="py-4 award_logos">
+        <Image src={LogoPanel} alt="Saint Jude Logos" />
+    </div>
+</div>
+
+<section class="container-fluid lightgray-bg py-4">
+    <div class="d-flex">
+    </div>
+</section>

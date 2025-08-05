@@ -17,12 +17,12 @@ h2 {
 }
 
 p {
-    color: #666666;
-    font-family: Lora, Arial;
-    font-size: 14pt;
-    font-weight: 400;
-    vertical-align: baseline;
-    line-height: 1.77;
+  color: #666666;
+  font-family: Lora, Arial;
+  font-size: 14pt;
+  font-weight: 400;
+  vertical-align: baseline;
+  line-height: 1.77;
 }
 
 em {
@@ -59,6 +59,7 @@ em {
     width: 100%;
     height: auto;
   }
+
   .gallery-headers {
     color: rgba(34, 110, 147, 1);
     font-size: 16pt;
@@ -90,4 +91,19 @@ em {
 .col-3-5 {
   flex: 0 0 auto;
   width: 31%;
+}
+
+.image_large {
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 886px;
+  }
+}
+
+.award_logos {
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
 }
