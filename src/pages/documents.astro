@@ -1,0 +1,55 @@
+---
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import GalleryImage from "../components/GalleryImage.astro";
+import BookNextEvent from "../components/BookNextEvent.astro";
+
+import { Image } from "astro:assets";
+
+import HomeHero from "../assets/home_hero.jpeg";
+import Gallery1 from "../assets/wedding_ceremonies.jpeg";
+import Gallery2 from "../assets/baptismal_ceremonies.jpeg";
+import Gallery3 from "../assets/funeral.jpeg";
+import Gallery4 from "../assets/hospital_visits.jpeg";
+import Gallery5 from "../assets/premarital_counseling.jpeg";
+import Gallery6 from "../assets/family_counseling.jpeg";
+
+import WeddingService1 from "../assets/wedding_service.jpeg";
+import WeddingService2 from "../assets/wedding_service_2.jpeg";
+import WeddingService3 from "../assets/wedding_service_3.jpeg";
+import WeddingService4 from "../assets/wedding_service_4.jpeg";
+---
+
+<Layout>
+    <HeroSection imagePath={HomeHero} title="Documents" body="" />
+
+    <!-- text start -->
+    <section class="container py-4">
+        <!-- <h1 class="text-center title-text">A Personalized Experience!</h1> -->
+        <div>
+            <p>
+                At Saint Jude, we understand that the journey to marital bliss
+                begins with meticulous preparation. Our comprehensive collection
+                of necessary wedding documents serves as the cornerstone of a
+                seamless and joyous union. From the ceremony information and
+                agreement form that outlines the sacred vows to thoughtfully
+                crafted premarital discussion questions that pave the way for
+                open communication, we provide the scaffolding for a strong
+                foundation.
+            </p>
+
+            <p>
+                Our meticulously designed questionnaire delves into the
+                intricacies of your relationship, fostering understanding and
+                unity. The inclusion of suggested readings adds a touch of
+                timeless inspiration to your special day. Moreover, we go the
+                extra mile by offering guidance on Marriage License locations
+                for various Florida Counties, ensuring your paperwork is as
+                stress-free as your celebration. At Saint Jude, we believe that
+                these documents are not just paperwork; they are the roadmap to
+                a lifetime of love and happiness.
+            </p>
+        </div>
+    </section>
+</Layout>
