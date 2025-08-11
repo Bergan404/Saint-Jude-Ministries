@@ -2,12 +2,14 @@
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import HeroSection from "../components/HeroSection.astro";
+import SubHeroSection from "../components/SubHeroSection.astro";
 import GalleryImage from "../components/GalleryImage.astro";
 import BookNextEvent from "../components/BookNextEvent.astro";
 
 import { Image } from "astro:assets";
 
 import HomeHero from "../assets/home_hero.jpeg";
+import DocumentHero from "../assets/documents_header.jpg";
 import Gallery1 from "../assets/wedding_ceremonies.jpeg";
 import Gallery2 from "../assets/baptismal_ceremonies.jpeg";
 import Gallery3 from "../assets/funeral.jpeg";
@@ -22,12 +24,12 @@ import WeddingService4 from "../assets/wedding_service_4.jpeg";
 ---
 
 <Layout>
-    <HeroSection imagePath={HomeHero} title="Documents" body="" />
+    <SubHeroSection imagePath={DocumentHero} title="Documents" body="" />
 
     <!-- text start -->
     <section class="container py-4">
         <!-- <h1 class="text-center title-text">A Personalized Experience!</h1> -->
-        <div>
+        <div class="py-3">
             <p>
                 At Saint Jude, we understand that the journey to marital bliss
                 begins with meticulous preparation. Our comprehensive collection
@@ -50,6 +52,79 @@ import WeddingService4 from "../assets/wedding_service_4.jpeg";
                 these documents are not just paperwork; they are the roadmap to
                 a lifetime of love and happiness.
             </p>
+        </div>
+
+        <hr />
+
+        <div class="text-center py-4">
+            <h2 class="text-center subtitle-text">Wedding Documents</h2>
+            <div class="d-flex flex-column gap-4 document_links">
+                <a
+                    target="_blank"
+                    href="https://uploads.documents.cimpress.io/v1/uploads/515cfefe-92b2-471e-8e0e-5351d6c0f63d~110/original?tenant=vbu-digital"
+                    >Ceremony Infor​mation & Agreement Form
+                </a>
+                <a
+                    target="_blank"
+                    href="http://uploads.documents.cimpress.io/v1/uploads/65c45fd2-3ce2-484f-a74a-d29c893f9e4e~110/original?tenant=vbu-digital"
+                    >Premarital Discussion Questions</a
+                >
+                <a
+                    target="_blank"
+                    href="https://uploads.documents.cimpress.io/v1/uploads/04cd831c-b21e-4dbb-ab23-5b5a69e52c0a~110/original?tenant=vbu-digital"
+                    >Questionnaire 4 Couples</a
+                >
+                <a
+                    target="_blank"
+                    href="http://uploads.documents.cimpress.io/v1/uploads/1d9219b5-85ff-401a-835d-03e97166da71~110/original?tenant=vbu-digital"
+                    >Suggested Readings</a
+                >
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="text-center py-4">
+            <h2 class="text-center subtitle-text">Florida Marriage Licenses</h2>
+            <p>
+                ***A Florida Marriage license is valid in the entire state,
+                therefore you may obtain a marriage license from any Clerk of
+                Court office***
+            </p>
+            <div class="d-flex flex-column gap-4 document_links">
+                <a
+                    target="_blank"
+                    href="https://stlucieclerk.gov/marriage-license-application"
+                    >Florida Marriage License in St. Lucie County (Virtual
+                    Option):
+                </a>
+                <a
+                    target="_blank"
+                    href="https://www.brevardclerk.us/how-to-apply-for-a-marriage-license"
+                    >Florida Marriage License in Brevard County (Mail Away
+                    Option):</a
+                >
+                <a
+                    target="_blank"
+                    href="https://www2.miamidadeclerk.gov/mlsweb/"
+                    >Florida Marriage License in Miami Dade County:</a
+                >
+                <a
+                    target="_blank"
+                    href="https://www.browardclerk.org/Divisions/Marriage#ApplicationInformation"
+                    >Florida Marriage License in Broward County:</a
+                >
+                <a
+                    target="_blank"
+                    href="https://www.mypalmbeachclerk.com/services/marriage-licenses-ceremonies"
+                    >Florida Marriage License in Palm Beach County:</a
+                >
+                <a
+                    target="_blank"
+                    href="https://monroe-clerk.com/marriage-license"
+                    >Florida Marriage License in Monroe County (Florida Keys):</a
+                >
+            </div>
         </div>
     </section>
 </Layout>
