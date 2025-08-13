@@ -1,7 +1,6 @@
 ---
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
-import HeroSection from "../components/HeroSection.astro";
 import SubHeroSection from "../components/SubHeroSection.astro";
 import GalleryImage from "../components/GalleryImage.astro";
 import BookNextEvent from "../components/BookNextEvent.astro";
@@ -10,6 +9,7 @@ import { Image } from "astro:assets";
 
 import HomeHero from "../assets/home_hero.jpeg";
 import DocumentHero from "../assets/documents_header.jpg";
+import AboutHero from "../assets/about_header.jpg";
 import Gallery1 from "../assets/wedding_ceremonies.jpeg";
 import Gallery2 from "../assets/baptismal_ceremonies.jpeg";
 import Gallery3 from "../assets/funeral.jpeg";
@@ -24,7 +24,7 @@ import WeddingService4 from "../assets/wedding_service_4.jpeg";
 ---
 
 <Layout>
-    <SubHeroSection imagePath={DocumentHero} title="Documents" body="" />
+    <SubHeroSection imagePath={AboutHero} title="About Us" body="" />
 
     <!-- text start -->
     <section class="container py-4">

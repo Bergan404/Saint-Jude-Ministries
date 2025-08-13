@@ -1,0 +1,199 @@
+---
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import SubHeroSection from "../components/SubHeroSection.astro";
+import GalleryImage from "../components/GalleryImage.astro";
+import BookNextEvent from "../components/BookNextEvent.astro";
+
+import { Image } from "astro:assets";
+
+import HomeHero from "../assets/home_hero.jpeg";
+import DocumentHero from "../assets/documents_header.jpg";
+import AboutHero from "../assets/about_header.jpg";
+import Gallery1 from "../assets/wedding_ceremonies.jpeg";
+import Gallery2 from "../assets/baptismal_ceremonies.jpeg";
+import Gallery3 from "../assets/funeral.jpeg";
+import Gallery4 from "../assets/hospital_visits.jpeg";
+import Gallery5 from "../assets/premarital_counseling.jpeg";
+import Gallery6 from "../assets/family_counseling.jpeg";
+
+import RevMichael from "../assets/rev_michael.jpeg";
+import RevMichael2 from "../assets/rev-michael-somberg.jpeg";
+import SaintJude1 from "../assets/saint_jude_logo.png";
+import SaintJude2 from "../assets/saint_jude_catholic_logo.png";
+---
+
+<Layout>
+    <SubHeroSection imagePath={AboutHero} title="About Us" body="" />
+
+    <!-- text start -->
+    <section class="container py-4">
+        <h2 class="text-center subtitle-text">Our Team:</h2>
+        <div class="py-3">
+            <p>
+                Our ministry is based on the belief that all people are entitled
+                to receive spiritual guidance and support, regardless of their
+                identified faith or background. Our entire team is committed to
+                serving those needs. As a result, a high percentage of the
+                services we provide are for our established families or
+                corporate groups, and from "word of mouth" referrals. We are a
+                proud inductee into The Knot Hall of Fame and consecutive
+                recipient of the Wedding Wire "Couples' Choice" Awards
+                (2012-2025) and The Knot "Best of Weddings."
+            </p>
+        </div>
+
+        <hr />
+
+        <div class="py-4">
+            <div class="d-flex gap-5">
+                <div class="col-4 about_images">
+                    <Image
+                        src={RevMichael}
+                        alt="The Reverend Michael J. Calderin"
+                    />
+                    <Image src={SaintJude1} alt="Saint Jude" />
+                    <Image src={SaintJude2} alt="Saint Jude Catholic" />
+                </div>
+                <div class="about_text">
+                    <h3 class="supporting-text">The Reverend Michael J. Calderin</h3>
+                    <strong>MA, CAP, CMHP, GSC</strong>
+                    <p>
+                        The Reverend Michael J. Calderin,MA, CMHP, CAP, GSC is
+                        the Senior Pastor and Administrator at Saint Jude.
+                        Reverend Michael oversees the ministry including the
+                        Pastoral and Chaplaincy training program. Reverend
+                        Michael is an active Police, Fire and Hospital Chaplain,
+                        and is a member of the International Conference of
+                        Police Chaplains and the Federation of Fire Chaplains.
+                        As a Chaplain, Reverend Michael serves those of all
+                        faiths.
+                    </p>
+                    <p>
+                        Reverend Michael also serves as Associate Pastor at
+                        Spirit of God Parish in Miami, assisting the Presiding
+                        Bishop of the Catholic Apostolic Church International.
+                        Reverend Michael also serves as needed at All Saints
+                        Catholic Mission in Oakland Park, Florida. Reverend
+                        Michael previously concelebrated at Our Lady of Hope
+                        Orthodox Catholic Church in Hollywood, Florida.
+                    </p>
+                    <p>
+                        Rev Michael earned a Master’s degree from the University
+                        of Phoenix, and a Bachelor’s degree from Empire State
+                        University of the State University of New York. Reverend
+                        Michael holds certifications in Mental Health,
+                        Addictions, and Victim Services.
+                    </p>
+                    <p>
+                        Reverend Michael completed his ministerial and
+                        chaplaincy training at New Directions Institute while
+                        providing spiritual guidance to those suffering from
+                        mental illness. Reverend Michael received Ecclesiastical
+                        training from the Western Orthodox Catholic Church and
+                        further training from the Catholic Apostolic Church
+                        International. In December 2023, Rev Michael was
+                        Incardinated into Good Shepherd Companions, an
+                        Ecumenical Catholic Ordinariate.
+                    </p>
+                    <p>
+                        Reverend Michael served at the Broward County Sheriff's
+                        Office from November 2000 through December 2012. He held
+                        several positions throughout his 12 years of service,
+                        rising to Commander in 2008. He received several letters
+                        of commendation for his distinguished service. Reverend
+                        Michael was appointed in 2007 as the Florida Chaplain
+                        for the National Police Defense Foundation where he
+                        continues to serve.
+                    </p>
+                    <p>
+                        Reverend Michael completed his counseling internship at
+                        New York Presbyterian Hospital/Columbia-Cornell Medical
+                        Center, where he subsequently served in the Department
+                        of Psychiatry for over 10 years prior to his relocation
+                        to Florida. Overall, Reverend Michael has over 38 years
+                        in public service.
+                    </p>
+                    <strong
+                        >Rev. Michael is the recipient of many distinguished
+                        Awards, including:
+                    </strong>
+                    <ul>
+                        <li>
+                            Unit Citation for responding to the Surfside
+                            building collapse
+                        </li>
+                        <li>
+                            Shomrim Society of South Florida "Person of the
+                            Year"
+                        </li>
+                        <li>B'nai B'rith Citation for Community Service</li>
+                        <li>New York 1 News "New Yorker of the Week"</li>
+                        <li>Broward Crime Stoppers President's Award</li>
+                        <li>
+                            Broward County Sheriff's Office "Award of
+                            Excellence"
+                        </li>
+                        <li>
+                            Decorated over 20 times during his service to the
+                            New York City Police Department, from 1987-1998.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="py-4">
+            <div class="d-flex gap-5">
+                <div class="col-4 about_images">
+                    <Image
+                        src={RevMichael2}
+                        alt="Reverend Michael Somberg"
+                    />
+                </div>
+                <div class="about_text">
+                    <h3 class="supporting-text">Reverend Michael Somberg</h3>
+                    <strong>MS, BS</strong>
+                    <p>
+                        The Reverend Michael Somberg, MS, BS is the Associate
+                        Pastor at Saint Jude, and is often referred to as "the
+                        other Rev. Michael" LOL. He is a 40 plus year veteran of
+                        law enforcement service, having retired in December
+                        2012, although he has stayed active in a consulting
+                        capacity to many police chiefs and sheriffs. Rev Michael
+                        served at the Miami Beach Police Department, and later
+                        joined the Broward County Sheriff's Office. Through the
+                        years, Michael has not only been a public servant but
+                        has served on numerous organizations as a volunteer and
+                        serving on the boards of the Boys and Girls Clubs and
+                        the YMCA. He has volunteered his time to the Miracle
+                        League as well as other organizations devoted to special
+                        needs children.
+                    </p>
+                    <p>
+                        Rev. Michael’s dynamic personality as well as his sense
+                        of humor and appreciation of the solemnity of the event
+                        will provide you with a wonderful memory of that most
+                        special day. Michael is a husband and proud father, and
+                        he understands the balance between the responsibilities
+                        of life and work.
+                    </p>
+                    <p>
+                        Rev Michael holds Bachelor of Science and Master of
+                        Science degrees from Florida State University-GO NOLES!!
+                        He is one of the select few law enforcement
+                        professionals who has ever been chosen to be a Senior
+                        Executive Fellow at the John F. Kennedy School of
+                        Government at Harvard University, where his area of
+                        interest focused on public policy issues. Michael
+                        completed his pastoral training and residency at Saint
+                        Jude. For those seeking a civil ceremony, Rev Michael is
+                        also a Notary Public, State of Florida.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
