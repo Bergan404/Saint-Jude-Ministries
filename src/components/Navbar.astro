@@ -1,83 +1,72 @@
 ---
 import { Image } from 'astro:assets';
 import Logo from "../assets/nav_logo.png";
+
+const pathname = Astro.url.pathname.replace(/\/+$/, "") || "/";
 ---
 
-
 <header id="navbar-1" class="container-fluid p-1 nav justify-content-center" role="banner">
-    <div class="row justify-content-between align-items-center w-100">
-        <div class="col-auto">
-            <a class="navbar-logo" href="/">
-                <Image src={Logo} alt="Saint Jude Logo" class="navbar-logo"/>
-            </a>
-        </div>
-        <div class="col-auto">
-            <nav class="navigation-menu d-none d-xl-flex align-items-center">
-                <div class="menu-primary-container">
-                    <ul id="menu-primary" class="menu">
-                        <li
-                            class=`${Astro.url.pathname === '/' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`
-                        >
-                            <a href="/">Home</a>
-                        </li>
-                        <li
-                            class=`${Astro.url.pathname === '/about' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`
-                        >
-                            <a href="/about">About</a>
-                        </li>
-                        <li
-                            class=`${Astro.url.pathname === '/documents' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`
-                        >
-                            <a href="/documents">Documents</a>
-                        </li>
-                        <li
-                            class=`${Astro.url.pathname === '/contact' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`
-                        >
-                            <a href="/contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <div
-                id="burger-nav"
-                role="button"
-                aria-label="Open navigation"
-                class="d-xl-none"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="burger-overlay"></div>
-        </div>
-    </div>
-    <nav class="mobile-nav d-flex justify-content-center align-items-center">
-        <div class="menu-primary-container">
-            <ul id="menu-primary" class="menu">
-                <li
-                    class="menu-item menu-item-type-custom menu-item-object-custom"
-                >
-                    <a href="/">Home</a>
-                </li>
-                <li
-                    class="menu-item menu-item-type-custom menu-item-object-custom"
-                >
-                    <a href="/about">About</a>
-                </li>
-                <li
-                    class="menu-item menu-item-type-custom menu-item-object-custom"
-                >
-                    <a href="/documents">Documents</a>
-                </li>
-                <li
-                    class="menu-item menu-item-type-custom menu-item-object-custom"
-                >
-                    <a href="/contact">contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+	<div class="row justify-content-between align-items-center w-100">
+		<div class="col-auto">
+			<a class="navbar-logo" href="/">
+				<Image src={Logo} alt="Saint Jude Logo" class="navbar-logo" />
+			</a>
+		</div>
+
+		<div class="col-auto">
+			<nav class="navigation-menu d-none d-xl-flex align-items-center">
+				<div class="menu-primary-container">
+					<ul id="menu-primary" class="menu">
+						<li class={`${pathname === '/' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`}>
+							<a href="/">Home</a>
+						</li>
+						<li class={`${pathname === '/about' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`}>
+							<a href="/about">About</a>
+						</li>
+						<li class={`${pathname === '/documents' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`}>
+							<a href="/documents">Documents</a>
+						</li>
+						<li class={`${pathname === '/contact' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`}>
+							<a href="/contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<div
+				id="burger-nav"
+				role="button"
+				aria-label="Open navigation"
+				class="d-xl-none"
+			>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<div class="burger-overlay"></div>
+		</div>
+	</div>
+
+	<nav class="mobile-nav d-flex justify-content-center align-items-center">
+		<div class="menu-primary-container">
+			<ul id="menu-primary-mobile" class="menu">
+				<li class={`${pathname === '/' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`}>
+					<a href="/">Home</a>
+				</li>
+				<li class={`${pathname === '/about' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`}>
+					<a href="/about">About</a>
+				</li>
+				<li class={`${pathname === '/documents' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`}>
+					<a href="/documents">Documents</a>
+				</li>
+				<li class={`${pathname === '/contact' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`}>
+					<a href="/contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 </header>
 
 <style lang="scss" is:global>

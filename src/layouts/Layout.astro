@@ -1,12 +1,11 @@
 ---
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.css';
 import { Breadcrumb } from 'astro-bootstrap';
 
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 
 import "../assets/styles/styles.scss";
-import { imageConfig } from 'astro:assets';
 ---
 
 <!doctype html>
@@ -17,12 +16,10 @@ import { imageConfig } from 'astro:assets';
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Saint Jude Ministries</title>
+
 		<meta property="og:title" content="Home" />
 		<meta property="og:type" content="website" />
-		<meta
-			property="og:url"
-			content="https://www.saintjudeministries.org/"
-		/>
+		<meta property="og:url" content="https://www.saintjudeministries.org/" />
 		<meta
 			property="og:description"
 			content="A Personalized Experience!
@@ -51,6 +48,7 @@ Saint Jude Ministries and Saint Jude Catholic Mission assists those persons who 
 			property="og:image"
 			content="https://lh5.googleusercontent.com/knucxMkfNmpQxkciqo1OOUzJTBSDVTlsMB-pjtjezX7-pTrhVSDURs1-EsMFizk2wNkfK82R1SxLj7S_1n6kclznyz256I2tOMMeWe1xYjoPYgiiocHBU4cc-g8YzcgkYCYSxk5hDwk=w16383"
 		/>
+
 		<link
 			href="https://fonts.googleapis.com/css?family=Lora%3A400%2C400italic%2C700%2C700italic%7CGentium%20Basic%3A400%2C400italic%2C700%2C700italic&display=swap"
 			rel="stylesheet"
@@ -68,12 +66,12 @@ Saint Jude Ministries and Saint Jude Catholic Mission assists those persons who 
 			rel="stylesheet"
 		/>
 	</head>
-	<Navbar />
 	<body>
+		<Navbar />
 		<!-- <Breadcrumb /> -->
 		<slot />
+		<Footer />
 	</body>
-	<Footer />
 </html>
 
 <style>
