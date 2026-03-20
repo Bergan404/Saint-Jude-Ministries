@@ -1,0 +1,99 @@
+---
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import SubHeroSection from "../components/SubHeroSection.astro";
+import GalleryImage from "../components/GalleryImage.astro";
+import BookNextEvent from "../components/BookNextEvent.astro";
+
+import { Image } from "astro:assets";
+
+import HomeHero from "../assets/home_hero.jpeg";
+import DocumentHero from "../assets/documents_header.jpg";
+import ContactHero from "../assets/contact_header.jpg";
+import ContactLogo from "../assets/contact_logo.jpg";
+import AboutHero from "../assets/about_header.jpg";
+import Gallery1 from "../assets/wedding_ceremonies.jpeg";
+import Gallery2 from "../assets/baptismal_ceremonies.jpeg";
+import Gallery3 from "../assets/funeral.jpeg";
+import Gallery4 from "../assets/hospital_visits.jpeg";
+import Gallery5 from "../assets/premarital_counseling.jpeg";
+import Gallery6 from "../assets/family_counseling.jpeg";
+
+import WeddingService1 from "../assets/wedding_service.jpeg";
+import WeddingService2 from "../assets/wedding_service_2.jpeg";
+import WeddingService3 from "../assets/wedding_service_3.jpeg";
+import WeddingService4 from "../assets/wedding_service_4.jpeg";
+---
+
+<Layout>
+    <SubHeroSection imagePath={ContactHero} title="Contact" body="" />
+
+    <!-- text start -->
+    <section class="container py-2">
+        <div class="py-3 w-100 image_medium">
+            <Image src={ContactLogo} alt="Wedding Sevice" />
+        </div>
+    </section>
+
+    <div class="get_in_touch lightgray-bg py-4 m-auto text-center">
+        <p>Get In Touch with Us Today and Let's Make Your Event Memorable!</p>
+    </div>
+
+    <!-- Info -->
+    <section class="container py-2">
+        <div class="text-center py-4">
+            <h2 class="text-center supporting-text-bold">Saint Jude</h2>
+            <p>15800 Pines Blvd #310, Pembroke Pines, FL 33027</p>
+
+            <h2 class="text-center supporting-text-bold">Email</h2>
+            <p>info@saintjudeministries.org</p>
+
+            <h2 class="text-center supporting-text-bold">Phone/Fax</h2>
+            <p class="phone"><strong>954-990-0918</strong></p>
+        </div>
+
+        <div class="py-4">
+            <p><u>
+                When contacting us by email or leaving a voicemail message
+                please include the following:
+            </u></p>
+            <ol>
+                <li>Type of service requested</li>
+                <li>Date and time of the service</li>
+                <li>Location or Venue, City and State</li>
+                <li>Additional languages preferred</li>
+                <li>Best contact number for you</li>
+                <li>Email address (if different)</li>
+            </ol>
+        </div>
+
+        <hr />
+
+        <div class="text-center py-4">
+            <h2 class="text-center supporting-text-bold">By appointment only:</h2>
+            <p>Monday through Friday 9AM–6PM</p>
+            <p>Saturday 9AM–1PM</p>
+            <p class="m-0">Limited evening and weekend appointments available</p>
+        </div>
+
+        <hr />
+    </section>
+</Layout>
+
+<style lang="scss">
+    .get_in_touch {
+        p {
+            font-style: italic;
+            color: #666666;
+            font-size: 27px;
+            font-family: "Gentium Basic", serif;
+            margin-bottom: 0px;
+        }
+    }
+
+    .phone {
+        font-style: italic;
+        font-size: 27px;
+        font-family: "Gentium Basic", serif;
+    }
+</style>

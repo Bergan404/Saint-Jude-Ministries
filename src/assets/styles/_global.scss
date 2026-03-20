@@ -125,6 +125,14 @@ em {
   line-height: 1.2;
 }
 
+.supporting-text-bold {
+  color: rgba(34, 110, 147, 1);
+  font-size: 21pt;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.2;
+}
+
 .lightgray-bg {
   background-color: rgba(242, 242, 242, 1);
   display: block;
@@ -145,6 +153,14 @@ em {
     width: 100%;
     object-fit: cover;
     height: 886px;
+  }
+}
+
+.image_medium {
+  img {
+    width: 100%;
+    object-fit: contain;
+    height: 500px;
   }
 }
 
