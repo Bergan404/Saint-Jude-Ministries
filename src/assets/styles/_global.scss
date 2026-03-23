@@ -1,3 +1,20 @@
+@mixin md-desktop {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1140px;
+  }
+}
+
 h1 {
   font-size: 68pt;
   font-family: Lora, serif;
@@ -5,6 +22,10 @@ h1 {
   line-height: 1;
   font-weight: 400;
   width: 100%;
+
+  @include md-desktop {
+    font-size: 45pt;
+  }
 }
 
 h2 {
@@ -14,6 +35,10 @@ h2 {
   line-height: 1;
   font-weight: 400;
   width: 100%;
+
+  @include md-desktop {
+    font-size: 22pt;
+  }
 }
 
 h3 {
@@ -23,7 +48,7 @@ h3 {
 p {
   color: #666666;
   font-family: Lora, Arial;
-  font-size: 14pt;
+  font-size: 12pt;
   font-weight: 400;
   vertical-align: baseline;
   line-height: 1.77;
@@ -36,7 +61,7 @@ li {
   font-weight: 400;
   vertical-align: baseline;
   line-height: 1.77;
-  margin-bottom: 15.0pt;
+  margin-bottom: 15pt;
 }
 
 .stronger {
@@ -46,7 +71,7 @@ li {
   font-weight: bolder;
   vertical-align: baseline;
   line-height: 1.77;
-  margin-bottom: 15.0pt;
+  margin-bottom: 15pt;
 }
 
 em {
@@ -107,6 +132,10 @@ em {
   font-weight: 400;
   letter-spacing: normal;
   line-height: 1.2;
+
+  @include md-desktop {
+    font-size: 25pt;
+  }
 }
 
 .subtitle-text {
@@ -115,6 +144,10 @@ em {
   font-weight: 400;
   letter-spacing: normal;
   line-height: 1.2;
+
+  @include md-desktop {
+    font-size: 20pt;
+  }
 }
 
 .supporting-text {
@@ -131,6 +164,10 @@ em {
   font-weight: 600;
   letter-spacing: normal;
   line-height: 1.2;
+
+  @include md-desktop {
+    font-size: 18pt;
+  }
 }
 
 .lightgray-bg {
@@ -146,6 +183,10 @@ em {
 .col-3-5 {
   flex: 0 0 auto;
   width: 31%;
+
+  @include md-desktop {
+    width: 100%;
+  }
 }
 
 .image_large {
@@ -153,6 +194,10 @@ em {
     width: 100%;
     object-fit: cover;
     height: 886px;
+
+    @include md-desktop {
+      height: fit-content;
+    }
   }
 }
 
@@ -161,6 +206,10 @@ em {
     width: 100%;
     object-fit: contain;
     height: 500px;
+
+    @include md-desktop {
+      height: fit-content;
+    }
   }
 }
 
@@ -210,8 +259,8 @@ em {
     img {
       width: 48px;
       height: 48px;
-          margin: 2px;
-          box-sizing: content-box;
+      margin: 2px;
+      box-sizing: content-box;
     }
   }
 }
