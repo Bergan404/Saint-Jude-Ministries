@@ -13,6 +13,7 @@ const { imagePath, title, body } = Astro.props;
 const imagePathAwaiting = await getImage({
   src: imagePath,
   format: "png",
+  inferSize: true,
 });
 ---
 
@@ -20,7 +21,13 @@ const imagePathAwaiting = await getImage({
 
 <header class="hero" id="homecover-1">
   <picture>
-    <img src={imagePathAwaiting.src} alt={title} id="houseopen" />
+    <img
+      src={imagePathAwaiting.src}
+      width={imagePathAwaiting.attributes.width}
+      height={imagePathAwaiting.attributes.height}
+      alt={title}
+      id="houseopen"
+    />
   </picture>
   <div class="overlay"></div>
   <div
