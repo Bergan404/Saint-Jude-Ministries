@@ -8,24 +8,18 @@ import BookNextEvent from "../components/BookNextEvent.astro";
 
 import { Image } from "astro:assets";
 
-import HomeHero from "../assets/home_hero.jpeg";
-import Gallery1 from "../assets/wedding_ceremonies.jpeg";
-import Gallery2 from "../assets/baptismal_ceremonies_new.jpg";
-import Gallery3 from "../assets/funeral.jpeg";
-import Gallery4 from "../assets/hospital_visits.jpeg";
-import Gallery5 from "../assets/premarital_counseling.jpeg";
-import Gallery6 from "../assets/family_counseling.jpeg";
-
-import WeddingService1 from "../assets/wedding_service.jpeg";
-import WeddingService2 from "../assets/wedding_service_2.jpeg";
-import WeddingService3 from "../assets/wedding_service_3.jpeg";
-import WeddingService4 from "../assets/wedding_service_4.jpeg";
-
 const response = await fetch(
   "https://cms.oudsdev.com/api/content/saint-jude/saint-jude-ministies/home",
 );
 const data = await response.json();
 const homePage = data.sectionsMap;
+
+type GalleryItem = {
+  image: string;
+  alt: string;
+};
+
+const gallery: GalleryItem[] = homePage.gallery_section.content.gallery;
 ---
 
 <Layout>
@@ -46,15 +40,11 @@ const homePage = data.sectionsMap;
   <!-- Gallery Images -->
   <section class="container-fluid lightgray-bg py-4">
     <div class="container d-flex flex-wrap gap-4">
-      <GalleryImage imagePath={Gallery1} title="Wedding Ceremonies" />
-      <GalleryImage imagePath={Gallery2} title="Baptismal Ceremonies" />
-      <GalleryImage
-        imagePath={Gallery3}
-        title="Funeral or Celebration of Life"
-      />
-      <GalleryImage imagePath={Gallery4} title="Hospital Visits" />
-      <GalleryImage imagePath={Gallery5} title="Premarital Counseling" />
-      <GalleryImage imagePath={Gallery6} title="Family Counseling" />
+      {
+        gallery.map((item) => (
+          <GalleryImage imagePath={item.image} title={item.alt} />
+        ))
+      }
     </div>
   </section>
 
@@ -84,7 +74,11 @@ const homePage = data.sectionsMap;
   <section class="container-fluid lightgray-bg py-4">
     <div class="container">
       <div class="py-5 w-100 image_large">
-        <Image src={WeddingService3} alt="Wedding Sevice" />
+        <Image
+          src={homePage.premarital_counseling_image.content.image}
+          alt={homePage.premarital_counseling_image.content.alt}
+          inferSize={true}
+        />
       </div>
 
       <BookNextEvent />
@@ -93,7 +87,11 @@ const homePage = data.sectionsMap;
 
   <section class="container py-4 px-4 px-md-0">
     <div class="py-5 w-100 image_large">
-      <Image src={WeddingService2} alt="Customized Ceremony" />
+      <Image
+        src={homePage.customized_ceremony_image_1.content.image}
+        alt={homePage.customized_ceremony_image_1.content.alt}
+        inferSize={true}
+      />
     </div>
 
     <h2 class="text-center subtitle-text">
@@ -102,7 +100,11 @@ const homePage = data.sectionsMap;
     <div set:html={homePage.customized_ceremony.content.text_block} />
 
     <div class="py-5 w-100 image_large">
-      <Image src={WeddingService4} alt="Customized Ceremony" />
+      <Image
+        src={homePage.customized_ceremony_image_2.content.image}
+        alt={homePage.customized_ceremony_image_2.content.alt}
+        inferSize={true}
+      />
     </div>
 
     <BookNextEvent />
