@@ -39,7 +39,7 @@ const gallery: GalleryItem[] = homePage.gallery_section.content.gallery;
 
   <!-- Gallery Images -->
   <section class="container-fluid lightgray-bg py-4">
-    <div class="container d-flex flex-wrap gap-4">
+    <div class="container d-flex flex-wrap gap-4 justify-content-center">
       {
         gallery.map((item) => (
           <GalleryImage imagePath={item.image} title={item.alt} />
