@@ -15,6 +15,19 @@
   }
 }
 
+/* SCROLLBAR */
+body::-webkit-scrollbar {
+  width: 0rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--blue);
+}
+
 h1 {
   font-size: 68pt;
   font-family: Lora, serif;
