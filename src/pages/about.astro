@@ -94,5 +94,30 @@ const Bio: BioItem[] = aboutPage.bio_section.content.bios;
     </div>
 
     <hr />
+
+    <div class="py-4">
+      <div class="d-flex gap-5 flex-column flex-md-row">
+        <div class="col col-md-4 about_images">
+          <Image
+            src={aboutPage.bio_section.content.bios[2].image}
+            alt={aboutPage.bio_section.content.bios[2].name}
+            inferSize={true}
+          />
+        </div>
+        <div class="about_text">
+          <h3 class="supporting-text">
+            {aboutPage.bio_section.content.bios[2].name}
+          </h3>
+          <div class="mb-3">
+            <span class="stronger"
+              >{aboutPage.bio_section.content.bios[2].title_position}</span
+            >
+          </div>
+          <div set:html={aboutPage.bio_section.content.bios[2].description} />
+        </div>
+      </div>
+    </div>
+
+    <hr />
   </section>
 </Layout>
